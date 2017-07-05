@@ -52,9 +52,11 @@ public class MainActivity extends AppCompatActivity {
         mArrayList=new ArrayList<>();
        mRecyclerView=(RecyclerView) findViewById(R.id.Recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        picture=(ImageView) findViewById(R.id.imageview);
+       // picture=(ImageView) findViewById(R.id.imageview);
         mButton=(Button) findViewById(R.id.button);
-        Button photob=(Button) findViewById(R.id.xiangji);
+      //  Button photob=(Button) findViewById(R.id.xiangji);
+
+        /*
         photob.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -78,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(intent,1);
             }
         });
+        */
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,6 +96,8 @@ public class MainActivity extends AppCompatActivity {
         });
         //makeJsonArrayRequest();
     }
+
+    /*
     @Override
     protected void onActivityResult(int requestCode,int resultCode,Intent data){
         switch (requestCode){
@@ -111,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
+*/
     private class SiteAdapter extends RecyclerView.Adapter<SiteHolder>{
 
         public SiteAdapter(ArrayList<Site> mSites){
